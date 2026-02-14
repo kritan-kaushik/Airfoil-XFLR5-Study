@@ -1,110 +1,74 @@
-# Airfoil-XFLR5-Study
-
-## Overview
-
-This repository presents a comparative aerodynamic analysis of multiple airfoil profiles using XFLR5 (XFoil viscous solver). The focus is on low Reynolds number aerodynamics relevant to UAVs, RC aircraft, and small-scale flight applications.
-
-The study evaluates aerodynamic performance through direct comparison of lift, drag, efficiency, pitching moment behavior, and boundary layer transition characteristics across multiple Reynolds numbers.
+# Airfoil Aerodynamic Analysis at Low Reynolds Numbers using XFLR5
 
 ---
 
-## Airfoils Studied
+##  Project Overview
 
-- Clark Y
-- E423
-- NACA 0012 (symmetric airfoil)
-- NACA 4412 (cambered airfoil)
+Low Reynolds number aerodynamics plays a critical role in the performance of small UAVs, gliders, RC aircraft, and low-speed flight applications. At low Reynolds numbers (Re < 300,000), aerodynamic behavior differs significantly from classical high-Re flow regimes due to:
 
-These airfoils were selected to compare cambered vs symmetric performance and evaluate low-Re optimized geometries.
+- Increased laminar flow dominance
+- Early boundary layer separation
+- Strong sensitivity to airfoil geometry
+- Transition effects influencing performance
 
----
-
-## Simulation Methodology
-
-Software:
-- XFLR5 (XFoil viscous analysis)
-
-Parameters:
-
-- Mach number: 0.0
-- Ncrit: 9
-- Panel count: ~200
-
-Reynolds numbers:
-
-- Re = 50,000
-- Re = 100,000
-- Re = 200,000
-
-Angle of attack:
-
-- -5° to +15°
-- Step size: 1°
+This project investigates the aerodynamic performance of selected airfoils under low Reynolds number conditions using XFLR5 viscous analysis. The objective is to understand how geometric differences influence lift, drag, stability, and aerodynamic efficiency.
 
 ---
 
-## Comparison Plots
+##  Research Objective
 
-The repository includes overlay comparisons for each Reynolds number.
+To analyze and compare aerodynamic performance of selected airfoils at low Reynolds numbers and identify design characteristics that influence efficiency and stall behavior.
 
-### CL vs Alpha (Lift Curve)
+Key research questions:
 
-Purpose:
-
-- Compare lift generation capability.
-- Observe stall behavior and lift slope.
-
-Observations:
-
-- Cambered airfoils generate positive lift at lower angles of attack.
-- Symmetric NACA0012 requires higher angle for equivalent lift.
+- How does airfoil geometry affect lift-to-drag performance at low Reynolds numbers?
+- How do stall characteristics vary between different airfoil profiles?
+- Which airfoil characteristics are more suitable for endurance-focused low-speed applications?
 
 ---
 
-### CL vs CD (Drag Polar)
+##  Hypothesis
 
-Purpose:
-
-- Evaluate aerodynamic efficiency envelope.
-
-Observations:
-
-- Cambered airfoils show improved lift-to-drag performance.
-- NACA0012 shows higher drag penalties in low-Re regimes.
+- Increased camber improves lift generation at low Reynolds numbers but may increase drag penalties.
+- Thin or optimized low-Re airfoils may demonstrate higher L/D ratios but sharper stall characteristics.
+- Aerodynamic performance will show strong sensitivity to Reynolds number variations.
 
 ---
 
-### L/D vs Alpha (Efficiency)
+##  Methodology
 
-Purpose:
+### Software and Analysis Method
 
-- Identify optimal operating angle.
-- Compare glide performance.
-
-Observations:
-
-- Efficiency increases with Reynolds number.
-- E423 and Clark Y demonstrate strong low-Re efficiency.
+- Software: XFLR5
+- Solver: XFOIL-based viscous analysis
+- Flow model: 2D steady-state analysis
 
 ---
 
-### Cm vs Alpha (Pitching Moment)
+### Simulation Parameters
 
-Purpose:
-
-- Evaluate stability characteristics.
-
-Observations:
-
-- Cambered airfoils exhibit more negative pitching moment.
+| Parameter | Value |
+|---|---|
+| Reynolds Numbers | 50,000 / 100,000 / 200,000 |
+| Mach Number | 0.05 |
+| Ncrit | 9 |
+| Angle of Attack Range | -5° to 15° |
+| Panel Resolution | 200 |
 
 ---
 
-### Transition Location
+### Controlled Variables
 
-Purpose:
+- Same solver settings used across all airfoils
+- Identical Reynolds number cases
+- Same angle-of-attack sweep
+- Consistent panel resolution
 
-- Observe boundary layer behavior and laminar transition.
+---
+
+### Variable Parameters
+
+- Airfoil geometry (camber, thickness distribution, leading-edge shape)
 
 ---
 
@@ -124,54 +88,76 @@ Purpose:
 
 ---
 
-## Key Aerodynamic Findings
+##  Performance Metrics
 
-- Cambered airfoils outperform symmetric airfoils at low Reynolds numbers due to improved lift generation and reduced separation sensitivity.
-- E423 demonstrates strong aerodynamic efficiency and higher lift capability, indicating suitability for low-speed applications.
-- Clark Y provides balanced performance with stable aerodynamic characteristics.
-- NACA0012 exhibits reduced efficiency due to symmetric geometry, resulting in higher drag at equivalent lift.
-- Increasing Reynolds number improves aerodynamic efficiency, lift capability, and stall behavior.
+The following aerodynamic metrics were analyzed:
 
----
-
-## Summary Comparison Table
-
-| Airfoil | Best L/D (Approx) | CLmax Trend | Comments |
-|---|---|---|---|
-| Clark Y | High | Moderate-High | Stable and balanced performance |
-| E423 | Very High | High | Optimized for low Reynolds flight |
-| NACA 0012 | Lower | Moderate | Symmetric; higher drag at low Re |
-| NACA 4412 | High | High | Strong lift and efficiency |
+- Lift coefficient (Cl)
+- Drag coefficient (Cd)
+- Lift-to-drag ratio (L/D)
+- Pitching moment coefficient (Cm)
+- Stall angle
+- Lift curve slope (Clα)
 
 ---
 
-## Notation
+##  Results
 
-- CL — Lift coefficient
-- CD — Drag coefficient
-- Cm — Pitching moment coefficient
-- α — Angle of attack (degrees)
-- L/D — Lift-to-drag ratio
+(Add plots directly here)
 
----
+Suggested plots:
 
-## Limitations
-
-- Analysis is two-dimensional.
-- XFoil predictions near stall contain uncertainty.
-- Surface roughness and real turbulence effects not included.
+- Cl vs Angle of Attack
+- Cd vs Angle of Attack
+- L/D vs Angle of Attack
+- Polar plots
+- Pressure coefficient (Cp) distribution
 
 ---
 
-## Future Work
+##  Analysis and Discussion
 
-- CFD validation (RANS analysis)
-- Experimental testing
-- 3D wing modeling
+Example observations:
+
+- Airfoil A shows higher maximum lift but increased drag penalty.
+- Airfoil B demonstrates smoother stall behavior, indicating improved boundary layer stability.
+- Reynolds number sensitivity suggests increased laminar separation effects at lower Re.
+
+Discussion points:
+
+- Influence of camber on pressure recovery
+- Laminar separation bubble effects
+- Stability implications from Cm trends
 
 ---
 
-## Repository Structure
+## 📐 Comparison with Theory (Optional)
+
+Comparison with thin airfoil theory:
+
+- Lift slope theoretical value ≈ 2π per radian.
+
+Discuss deviations and possible reasons such as viscous effects and low Reynolds number flow behavior.
+
+---
+
+##  Limitations
+
+- XFOIL-based methods may be inaccurate near stall or under highly separated flow conditions.
+- Results represent 2D aerodynamic behavior and do not account for 3D effects.
+- Transition modeling depends on Ncrit parameter assumptions.
+
+---
+
+##  Future Work
+
+- CFD validation using higher-fidelity solvers
+- Wind tunnel testing comparison
+- Optimization-based airfoil selection
+- Extension to 3D wing analysis
+
+---
+##  Repository Structure
 
 ```
 airfoils/
@@ -189,7 +175,19 @@ methodology/
 ├── simulation_settings.md
 ```
 
-Each airfoil directory contains individual performance plots and geometry (.dat) files.
+---
 
-The comparison folder contains overlay plots comparing all airfoils at identical Reynolds numbers.
+## 📚 References
+
+- XFLR5 Documentation
+- XFOIL Methodology Papers
+- Low Reynolds Number Airfoil Research Literature
+
+---
+
+## ✍️ Author
+
+Kritan Kaushik
+
+## 📁 Repository Structure
 
