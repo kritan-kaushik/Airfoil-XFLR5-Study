@@ -47,20 +47,22 @@ These airfoils were selected to compare:
 ---
 
 ## Repository Structure
+
+`
 airfoils/
-├── clarky/
-├── e423/
-├── naca0012/
-├── naca4412/
+├──clarky/
+├──e423/
+├──naca0012/
+├──naca4412/
 
 comparison/
-├── Re50000_*.png
-├── Re100000_*.png
-├── Re200000_*.png
+├──Re50000_.png
+├──Re100000_.png
+├──Re200000_*.png
 
 methodology/
-├── simulation_settings.md
-
+├──simulation_settings.md
+`
 
 Each airfoil directory contains individual performance plots and geometry (.dat) files.
 
