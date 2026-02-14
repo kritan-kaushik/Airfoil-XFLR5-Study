@@ -193,7 +193,7 @@ methodology/
 
 ---
 
-## 📚 References
+##  References
 
 - XFLR5 Documentation
 - XFOIL Methodology Papers
@@ -201,9 +201,7 @@ methodology/
 
 ---
 
-## ✍️ Author
+##  Author
 
-Kritan Kaushik
-
-## 📁 Repository Structure
+<ins>**Kritan Kaushik**<ins/>
 
