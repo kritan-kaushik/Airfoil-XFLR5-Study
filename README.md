@@ -72,6 +72,22 @@ Key research questions:
 
 ---
 
+##  Airfoils Investigated
+
+### Clark Y
+![Clark Y](airfoils/clarky/CLARKY.png)
+
+### Eppler (E423)
+![E423](airfoils/e423/E423.png)
+
+### NACA 0012
+![NACA0012](airfoils/naca0012/NACA0012.png)
+
+### NACA 4412
+![NACA4412](airfoils/naca4412/NACA4412.png)
+
+---
+
 ## Comparison Images
 
 ### Reynolds Number = 50,000
