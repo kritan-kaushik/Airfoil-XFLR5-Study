@@ -103,7 +103,7 @@ The following aerodynamic metrics were analyzed:
 
 ##  Results
 
-![Final Graph](All.png)
+![Final Graph](ALL.png)
 
 Suggested plots:
 
