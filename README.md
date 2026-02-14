@@ -112,15 +112,15 @@ Purpose:
 
 ### Reynolds Number = 50,000
 
-![Re50000 Comparison](comparison/Re%2050000.png)
+![Re50000 Comparison](comparison/Re50000.png)
 
 ### Reynolds Number = 100,000
 
-![Re100000 Comparison](comparison/Re%20100000.png)
+![Re100000 Comparison](comparison/Re100000.png)
 
 ### Reynolds Number = 200,000
 
-![Re200000 Comparison](comparison/Re%20200000.png)
+![Re200000 Comparison](comparison/Re200000.png)
 
 ---
 
